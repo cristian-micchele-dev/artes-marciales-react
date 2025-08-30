@@ -1,0 +1,214 @@
+/* Card principal */
+.discipline-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.discipline-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Container de imagen */
+.discipline-image-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Imagen */
+.discipline-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.discipline-card:hover .discipline-image {
+  transform: scale(1.05);
+}
+
+/* Overlay sobre la imagen */
+.discipline-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.discipline-card:hover .discipline-overlay {
+  opacity: 1;
+}
+
+.discipline-name {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: var(--font-secondary);
+}
+
+/* Contenido de la card */
+.discipline-content {
+  padding: 1.5rem;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.discipline-content h3 {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+  font-family: var(--font-secondary);
+}
+
+.discipline-content p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+  font-family: var(--font-text);
+}
+
+/* Responsive para las cards */
+@media (max-width: 1399px) {
+  .discipline-image-container {
+    height: 200px;
+  }
+  
+  .discipline-content h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .discipline-image-container {
+    height: 180px;
+  }
+  
+  .discipline-content {
+    padding: 1.2rem;
+  }
+  
+  .discipline-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .discipline-name {
+    font-size: 1.2rem;
+  }
+}
+
+/* Grid horizontal - Artes una al lado de las otras */
+.disciplines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Para asegurar que se vean todas en una fila en pantallas grandes */
+@media (min-width: 1400px) {
+  .disciplines-grid {
+    grid-template-columns: repeat(6, 1fr); /* 6 columnas para 6 artes */
+    gap: 1.2rem;
+  }
+  
+  .discipline-card {
+    min-height: 420px;
+  }
+  
+  .discipline-image-container {
+    height: 220px;
+  }
+  
+  .discipline-content {
+    padding: 1.2rem;
+  }
+  
+  .discipline-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .discipline-content p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Pantallas medianas - 3 por fila */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .disciplines-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets - 2 por fila */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .disciplines-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+  
+  .discipline-image-container {
+    height: 230px;
+  }
+}
+
+/* Móviles - 1 por fila */
+@media (max-width: 767px) {
+  .disciplines-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .discipline-image-container {
+    height: 200px;
+  }
+  
+  .discipline-content {
+    padding: 1.2rem;
+  }
+  
+  .discipline-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .discipline-name {
+    font-size: 1.3rem;
+  }
+}
+

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.disciplinas-section {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.disciplinas-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.disciplinas-header h2 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+.disciplinas-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+/* GRID HORIZONTAL - CLAVE PARA QUE ESTÉN UNA AL LADO DE LA OTRA */
+.disciplines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Para pantallas muy grandes - forzar todas en una fila */
+@media (min-width: 1400px) {
+  .disciplines-grid {
+    grid-template-columns: repeat(6, 1fr); /* 6 columnas exactas */
+    gap: 1.2rem;
+  }
+}
+
+/* Pantallas grandes - 3 por fila */
+@media (min-width: 1024px) and (max-width: 1399px) {
+  .disciplines-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets - 2 por fila */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .disciplines-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Móviles - 1 por fila */
+@media (max-width: 767px) {
+  .disciplines-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
+.disciplinas-footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+
+
+.btn-ver-todas:hover {
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .disciplinas-section {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .disciplinas-header h2 {
+    font-size: 2rem;
+  }
+  
+  .disciplinas-header {
+    margin-bottom: 2rem;
+  }
+  
+  .disciplinas-footer {
+    margin-top: 2rem;
+  }
+}

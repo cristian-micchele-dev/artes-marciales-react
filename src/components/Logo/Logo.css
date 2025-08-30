@@ -1,0 +1,302 @@
+/* Logo Container */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Logo Icon - Colores más sutiles */
+.logo-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2c2c2c 0%, #404040 50%, #1a1a1a 100%);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  box-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+.logo-symbol {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.8));
+}
+
+.logo-accent {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.8));
+}
+
+/* Logo Text - Colores más elegantes */
+.logo-text {
+  text-align: center;
+}
+
+.logo-title {
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: 3px;
+  background: linear-gradient(45deg, #ffffff 0%, #e0e0e0 25%, #ffffff 50%, #cccccc 75%, #ffffff 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: logoShine 4s ease-in-out infinite;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  font-family: 'Arial Black', sans-serif;
+}
+
+.logo-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  margin: 1rem auto;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.logo-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  opacity: 0.85;
+}
+
+/* Tamaños del Logo */
+.logo-container.large {
+  gap: 1.5rem;
+}
+
+.logo-container.large .logo-icon {
+  width: 120px;
+  height: 120px;
+}
+
+.logo-container.large .logo-symbol {
+  font-size: 3rem;
+}
+
+.logo-container.large .logo-accent {
+  font-size: 2.5rem;
+}
+
+.logo-container.large .logo-title {
+  font-size: 4rem;
+}
+
+.logo-container.large .logo-divider {
+  width: 100px;
+}
+
+.logo-container.large .logo-subtitle {
+  font-size: 1.4rem;
+}
+
+/* Tamaño mediano */
+.logo-container.medium {
+  gap: 1rem;
+}
+
+.logo-container.medium .logo-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.logo-container.medium .logo-symbol {
+  font-size: 2rem;
+  top: 10px;
+}
+
+.logo-container.medium .logo-accent {
+  font-size: 1.8rem;
+  bottom: 10px;
+}
+
+.logo-container.medium .logo-title {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.logo-container.medium .logo-divider {
+  width: 80px;
+}
+
+.logo-container.medium .logo-subtitle {
+  font-size: 1.1rem;
+}
+
+/* Tamaño pequeño */
+.logo-container.small {
+  gap: 0.5rem;
+}
+
+.logo-container.small .logo-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.logo-container.small .logo-symbol {
+  font-size: 1.5rem;
+  top: 8px;
+}
+
+.logo-container.small .logo-accent {
+  font-size: 1.3rem;
+  bottom: 8px;
+}
+
+.logo-container.small .logo-title {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+.logo-container.small .logo-divider {
+  width: 60px;
+}
+
+.logo-container.small .logo-subtitle {
+  font-size: 0.9rem;
+}
+
+/* Variante dorada (opcional) */
+.logo-container.gold .logo-icon {
+  background: linear-gradient(135deg, #2c2c2c 0%, #3d3d3d 50%, #1a1a1a 100%);
+  border: 2px solid rgba(218, 165, 32, 0.3);
+  box-shadow: 
+    0 0 20px rgba(218, 165, 32, 0.2),
+    inset 0 0 20px rgba(218, 165, 32, 0.05);
+}
+
+.logo-container.gold .logo-title {
+  background: linear-gradient(45deg, #ffffff 0%, #f0f0f0 25%, #daa520 50%, #f0f0f0 75%, #ffffff 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-container.gold .logo-divider {
+  background: linear-gradient(90deg, transparent, rgba(218, 165, 32, 0.6), transparent);
+  box-shadow: 0 0 10px rgba(218, 165, 32, 0.3);
+}
+
+/* Variante oscura para footer */
+.logo-container.dark .logo-icon {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 50%, #0f0f0f 100%);
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 
+    0 0 15px rgba(0, 0, 0, 0.8),
+    inset 0 0 15px rgba(255, 255, 255, 0.02);
+}
+
+.logo-container.dark .logo-title {
+  background: linear-gradient(45deg, #666 0%, #999 25%, #666 50%, #999 75%, #666 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-container.dark .logo-subtitle {
+  color: #999;
+  opacity: 0.8;
+}
+
+.logo-container.dark .logo-divider {
+  background: linear-gradient(90deg, transparent, rgba(153, 153, 153, 0.4), transparent);
+  box-shadow: 0 0 5px rgba(153, 153, 153, 0.2);
+}
+
+/* Animaciones mejoradas */
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    box-shadow: 
+      0 0 20px rgba(0, 0, 0, 0.5),
+      inset 0 0 20px rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+    box-shadow: 
+      0 5px 25px rgba(0, 0, 0, 0.6),
+      inset 0 0 25px rgba(255, 255, 255, 0.08);
+  }
+}
+
+@keyframes logoShine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-container.large {
+    gap: 1rem;
+  }
+  
+  .logo-container.large .logo-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .logo-container.large .logo-symbol {
+    font-size: 2.5rem;
+  }
+  
+  .logo-container.large .logo-accent {
+    font-size: 2rem;
+  }
+  
+  .logo-container.large .logo-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  
+  .logo-container.large .logo-subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container.large .logo-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .logo-container.large .logo-title {
+    font-size: 2rem;
+  }
+  
+  .logo-container.large .logo-subtitle {
+    font-size: 1rem;
+  }
+}

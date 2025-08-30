@@ -1,0 +1,251 @@
+/* Item individual de disciplina - Mejorado */
+.disciplina-item {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%; /* Usar todo el ancho disponible */
+  min-height: 600px; /* Altura mínima para consistencia */
+}
+
+.disciplina-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen de la disciplina - Más grande */
+.disciplina-imagen {
+  position: relative;
+  height: 300px; /* Aumentado de 250px */
+  overflow: hidden;
+  width: 100%;
+  flex-shrink: 0; /* No se encoge */
+}
+
+.disciplina-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Centrar imagen */
+  transition: transform 0.3s ease;
+}
+
+.disciplina-item:hover .disciplina-imagen img {
+  transform: scale(1.05);
+}
+
+.disciplina-overlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+}
+
+/* Información de la disciplina */
+.disciplina-info {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1; /* Ocupa el espacio restante */
+}
+
+/* Header centrado */
+.disciplina-header-info {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.disciplina-header-info h2 {
+  font-size: 2.2rem; /* Ligeramente más grande */
+  color: #1a1a1a;
+  margin: 0;
+  font-weight: bold;
+}
+
+.disciplina-descripcion {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+.disciplina-detalles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1.2rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.disciplina-detalles strong {
+  color: #2563eb;
+}
+
+/* Beneficios */
+.disciplina-beneficios h3 {
+  color: #1a1a1a;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.disciplina-beneficios ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr; /* Una columna */
+  gap: 0.8rem;
+}
+
+.disciplina-beneficios li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: #555;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.disciplina-beneficios li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Horarios */
+.disciplina-horarios h3 {
+  color: #1a1a1a;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.horarios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.horario-item {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.horario-item:hover {
+  border-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.horario-dia {
+  font-weight: bold;
+  color: #2563eb;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.horario-hora {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.horario-nivel {
+  font-size: 0.85rem;
+  color: #666;
+  background: #f3f4f6;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+/* Botones de acción */
+.disciplina-acciones {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+
+
+
+
+
+/* Responsive mejorado */
+@media (max-width: 1200px) {
+  .disciplina-imagen {
+    height: 280px;
+  }
+  
+  .disciplina-info {
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .disciplina-imagen {
+    height: 250px;
+  }
+  
+  .disciplina-info {
+    padding: 1.5rem;
+  }
+  
+  .disciplina-header-info h2 {
+    font-size: 2rem;
+  }
+  
+  .disciplina-detalles {
+    grid-template-columns: 1fr;
+  }
+  
+  .horarios-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Botones de acción - Dos botones */
+  .disciplina-acciones {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+ 
+}
+
+
+.btn-contactar {
+ padding: 1rem 2rem;
+ border-radius: 25px;
+ font-size: 1rem;
+ font-weight: bold;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ flex: 1;
+ max-width: 180px;
+ box-shadow: 0 2px 10px rgba(16, 185, 129, 0.2);
+ background-color: #10b981;
+
+}

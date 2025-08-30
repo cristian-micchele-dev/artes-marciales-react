@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+.home {
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Sección Hero */
+/* Hero section - Nuevo esquema azul */
+.hero {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2563eb 100%); /* Cambiado de naranja */
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  padding: 4px;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: #2563eb; /* Cambiado de #ff6b35 */
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+
+
+.btn-primary:hover {
+  background-color: #ff8c42;
+  transform: translateY(-2px);
+}
+
+
+
+/* Secciones */
+section {
+  padding: 4rem 0;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+  font-family: 'Oswald', sans-serif;
+}
+
+section p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Sección Why Us */
+.why-us {
+  background-color: #f8f9fa;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.benefit {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  padding: 1rem;
+}
+
+/* Testimonios */
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+
+}
+
+.testimonio {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.autor {
+  font-weight: bold;
+  color: #ff6b35;
+  margin-top: 1rem;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2563eb 100%); /* Cambiado de naranja */
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.cta h2, .cta p {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  section {
+    padding: 2rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}

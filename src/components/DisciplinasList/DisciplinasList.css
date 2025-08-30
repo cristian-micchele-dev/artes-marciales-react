@@ -1,0 +1,31 @@
+/* Container de disciplinas - Grid mejorado */
+.disciplinas-container {
+  max-width: 1400px; /* Aumentado para más espacio */
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Más flexible */
+  gap: 2rem; /* Reducido para mejor distribución */
+  justify-items: stretch; /* Estirar items para llenar espacio */
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .disciplinas-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .disciplinas-container {
+    padding: 0 1rem;
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .disciplinas-container {
+    gap: 1.5rem;
+  }
+}
