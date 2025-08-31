@@ -4,7 +4,7 @@ import Aikido from '../assets/Cards/aikido.jpg';
 import Judo from '../assets/Cards/Judo2.jpeg';
 import JiujitsuBr from '../assets/Cards/jiu-jitsu-brasileno.jpg';
 import MuayThai from '../assets/Cards/MuayThai.jpg';
-import Taekwondo from '../assets/Cards/taekwondo.png';
+import Taekwondo from '../assets/Cards/Taekwondo.png';
 
 export const disciplinasData = [
   {
@@ -47,7 +47,6 @@ export const disciplinasData = [
       { dia: "Jueves", hora: "17:00 - 18:30", nivel: "Principiante" },
       { dia: "Martes", hora: "19:00 - 20:30", nivel: "Avanzado" },
     ],
-    precio: "$85/mes",
     instructor: "Maestro Ana Kim"
   },
   {

@@ -1,8 +1,8 @@
-import Karate1 from '/src/assets/Header/karate1.jpg';
-import Aikido1 from '/src/assets/Header/aikido1.jpg';
-import Samurai1 from '/src/assets/Header/samurai1.jpg';
-import Judo2 from '/src/assets/Cards/Judo.jpg';
-
+// ✅ CORRECTO - Rutas relativas
+import Karate1 from '../assets/Header/karate1.jpg';
+import Aikido1 from '../assets/Header/aikido1.jpg';
+import Samurai1 from '../assets/Header/samurai1.jpg';
+import Judo2 from '../assets/Cards/Judo.jpg';
 
 export const articulosData = [
   {
@@ -41,12 +41,12 @@ export const articulosData = [
   {
     id: 4,
     imagen: Judo2,
-    titulo: "Historia del  Judo",
+    titulo: "Historia del Judo",
     fecha: "15 de Junio, 2024",
     descripcion: [
       "El Judo es una disciplina de artes marciales japonesa que se originó en el siglo XVII. La palabra \"judo\" significa \"ataque\" en japonés, lo que refleja que es una disciplina que se enfoca en el ataque y el combate.",
-      "El Judo se basa en el uso de las manos y los pies como armas, y se enfoca en el combate cuerpo a cuerpo. La disciplina se divide en dos ramos: el Judo tradicional y el Judo moderno.",
+      "El Judo se basa en el uso de las manos y los pies como armas, y se enfoca en el combate cuerpo a cuerpo. La disciplina se divide en dos ramos: el Judo tradicional y el Judo moderno."
     ],
     invertido: true
-  },
+  }
 ];
