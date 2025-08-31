@@ -15,7 +15,7 @@ const DynamicHeader = ({ children }) => {
         };
       case '/disciplinas':
         return {
-          videoSrc: '/videos/JudoVideo.mp4',
+          videoSrc: '/videos/JudoVideo2.mp4',
           title: 'Nuestras Disciplinas',
           subtitle: 'Encuentra tu arte marcial ideal'
         };
