@@ -11,23 +11,25 @@ const DynamicHeader = ({ children }) => {
         return {
           videoSrc: '/videos/istockphoto-853278976-640_adpp_is.mp4',
           title: 'Seishin Dojo',
-          subtitle: 'Academia de Artes Marciales'
+          subtitle: 'Academia de Artes Marciales',
+          useVideo: true
         };
       case '/disciplinas':
         return {
           videoSrc: '/videos/JudoVideo2.mp4',
           title: 'Nuestras Disciplinas',
-          subtitle: 'Encuentra tu arte marcial ideal'
+          subtitle: 'Encuentra tu arte marcial ideal',
+          useVideo: true
         };
       case '/articulos':
         return {
-          videoSrc: '/videos/articulos-video.mp4',
+          videoSrc: '/videos/articulos.mp4', // Solo imagen para artículos
           title: 'Artículos y Noticias',
-          subtitle: 'Mantente informado sobre artes marciales'
+          subtitle: 'Mantente informado sobre artes marciales',
+          useVideo: true
         };
       default:
         return {
-          videoSrc: '/videos/istockphoto-853278976-640_adpp_is.mp4',
           title: 'Seishin Dojo',
           subtitle: 'Academia de Artes Marciales'
         };

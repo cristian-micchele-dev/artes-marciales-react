@@ -4,11 +4,11 @@
 .header {
   position: relative;
   min-height: 600px; /* Aumentado para el título */
-  background-image: url('../../assets/Header/headerMartial.avif');
+/*   background-image: url('../../assets/Header/headerMartial.avif');
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   color: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
