@@ -1,9 +1,10 @@
-import karate from '/src/assets/Cards/karate.jpg';
-import Aikido from '/src/assets/Cards/aikido.jpg';
-import Judo from '/src/assets/Cards/Judo2.jpeg';
-import JiujitsuBr from '/src/assets/Cards/jiu-jitsu-brasileno.jpg';
-import MuayThai from '/src/assets/Cards/MuayThai.jpg';
-import Taekwondo from '/src/assets/Cards/taekwondo.png';
+// Cambiar de rutas absolutas a rutas relativas
+import karate from '../assets/Cards/karate.jpg';
+import Aikido from '../assets/Cards/aikido.jpg';
+import Judo from '../assets/Cards/Judo2.jpeg';
+import JiujitsuBr from '../assets/Cards/jiu-jitsu-brasileno.jpg';
+import MuayThai from '../assets/Cards/MuayThai.jpg';
+import Taekwondo from '../assets/Cards/taekwondo.png';
 
 export const disciplinasData = [
   {
@@ -25,7 +26,6 @@ export const disciplinasData = [
       { dia: "Miércoles", hora: "18:00 - 19:30", nivel: "Principiante" },
       { dia: "Viernes", hora: "19:30 - 21:00", nivel: "Avanzado" },
     ],
-   
     instructor: "Sensei Carlos Martínez"
   },
   {
