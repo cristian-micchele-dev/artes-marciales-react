@@ -13,13 +13,9 @@ const Header = ({ children, videoSrc, title, subtitle }) => {
         muted 
         loop 
         playsInline
-        preload="metadata" // Carga metadatos rápidamente
-        poster="" // Poster vacío para evitar imagen por defecto
+        preload="auto"
+        poster=""
         key={videoSrc}
-        onLoadedData={() => {
-          // Asegurar que el video esté listo
-          console.log('Video cargado');
-        }}
       >
         <source src={videoSrc} type="video/mp4" />
       </video>
