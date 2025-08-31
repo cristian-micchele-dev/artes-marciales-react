@@ -50,11 +50,12 @@ Incluye información sobre disciplinas, instructores, artículos y servicios, co
 
 ---
 
+
 ## 🛠️ Instalación
 ```bash
 # Clonar repo
-git clone https://github.com/tu-usuario/seishin-dojo.git
-cd seishin-dojo
+git clone https://github.com/cristian-micchele-dev/artes-marciales-react.git
+cd artes-marciales-react
 
 # Instalar dependencias
 npm install
